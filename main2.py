@@ -134,9 +134,9 @@ def predict_y(train_file_name, test_file_name):
         acc_score_arr.append([name, acc_score])
         predict_vals_arr.append(y_test_pred)
         
-    acc_score_arr.append(['', ''])
-    acc_score_arr.append(['Train excel', train_file_name.split('/')[-1]])
-    acc_score_arr.append(['Test excel', test_file_name.split('/')[-1]])
+    # acc_score_arr.append(['', ''])
+    # acc_score_arr.append(['Train excel', train_file_name.split('/')[-1]])
+    # acc_score_arr.append(['Test excel', test_file_name.split('/')[-1]])
     acc_score_df = pd.DataFrame(data=acc_score_arr, columns = ['Model Name','Accuracy Score'])
 
 
@@ -179,7 +179,7 @@ if __name__ == '__main__':
         # st.write(uploaded_file2.name)
         # st.write(os. getcwd())
         
-        predict_file_name_full, fig1_bytes, fig2_bytes, acc_score_df = predict_y("excel_data\\"+uploaded_file1.name, "excel_data\\"+uploaded_file2.name)
+        predict_file_name_full, fig1_bytes, fig2_bytes, acc_score_df = predict_y(uploaded_file1, uploaded_file2)
         
         predict_file_name = predict_file_name_full.split('\\')[-1]
         st.header('Data before standard scaler:')
