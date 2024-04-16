@@ -168,7 +168,7 @@ if __name__ == '__main__':
     st.write('''
              1. Виберіть файл із тренувальними даними
              2. Виберіть файл із тестувальними даними
-             3. Натисніть **Submit** ''')
+             3. Натисніть **Submit**, чекайте 4-5 хвилин ''')
     uploaded_file1 = st.file_uploader("Choose train excel:")
     uploaded_file2 = st.file_uploader("Choose test excel:")
     bt = st.button('Submit')
